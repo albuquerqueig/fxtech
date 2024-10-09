@@ -195,6 +195,24 @@ nav ul li a:active::after {
     margin-top: 30px;
 }
 
+.instagram_home {
+    width: 16px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.discord_home {
+    width: 16px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.linkedin_home {
+    width: 16px;
+    height: auto;
+    margin-right: 5px;
+}
+
 /* Labs section */
 .labs {
     padding: 80px 10%;
@@ -373,6 +391,24 @@ footer {
     font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
     font-family: 'Tektur', sans-serif; /* Certifique-se de usar a fonte correta */
     color: white; /* Ajusta a cor do texto para se destacar */
+}
+
+.instagram_footer {
+    width: 16px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.discord_footer {
+    width: 16px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.linkedin_footer {
+    width: 16px;
+    height: auto;
+    margin-right: 5px;
 }
 
 .footer-info {
