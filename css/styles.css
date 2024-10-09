@@ -161,8 +161,9 @@ nav ul li a:active::after {
 }
 
 .star-content img {
-    width: 20px; /* Define um tamanho menor para a estrela */
-    height: 20px; /* Mantém a altura da estrela consistente com a largura */
+    margin-top: 6px;
+    width: 20px;
+    height: 20px;
 }
 
 .star-content p {
@@ -196,19 +197,19 @@ nav ul li a:active::after {
 }
 
 .instagram_home {
-    width: 16px;
+    width: 20px;
     height: auto;
     margin-right: 5px;
 }
 
 .discord_home {
-    width: 16px;
+    width: 20px;
     height: auto;
     margin-right: 5px;
 }
 
 .linkedin_home {
-    width: 16px;
+    width: 20px;
     height: auto;
     margin-right: 5px;
 }
@@ -245,7 +246,8 @@ nav ul li a:active::after {
 }
 
 .labs-item img {
-    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    margin-top: 8px;
+    margin-right: 10px;
     width: 20px;
     height: auto;
 }
@@ -383,36 +385,44 @@ footer {
 }
 
 .logo2 {
-    width: 50px; /* Defina o tamanho do logo conforme necessário */
-    margin-right: 10px; /* Adiciona um espaço entre o logo e o nome */
+    transform: translateX(-15px);
+    margin-bottom: 10px;
+    width: 50px;
+    margin-right: 10px;
 }
 
 .text_logo2 {
-    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
-    font-family: 'Tektur', sans-serif; /* Certifique-se de usar a fonte correta */
-    color: white; /* Ajusta a cor do texto para se destacar */
+    margin-bottom: 10px;
+    transform: translateX(-18px);
+    font-size: 24px;
+    font-family: 'Tektur';
+    color: white;
 }
 
 .instagram_footer {
+    margin-right: 5px;
+    margin-bottom: 10px;
     width: 16px;
     height: auto;
-    margin-right: 5px;
 }
 
 .discord_footer {
+    margin-right: 5px;
+    margin-bottom: 10px;
     width: 16px;
     height: auto;
-    margin-right: 5px;
 }
 
 .linkedin_footer {
+    margin-right: 5px;
+    margin-bottom: 10px;
     width: 16px;
     height: auto;
-    margin-right: 5px;
 }
 
 .footer-info {
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 /*Footer menu*/
