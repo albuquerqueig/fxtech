@@ -183,6 +183,12 @@ nav ul li a:active::after {
     height: auto;
 }
 
+.license_line2 {
+    margin-top: 50px;
+    width: 150%;
+    align-items: center;
+}
+
 .social-links {
     display: flex;
     gap: 15px;
