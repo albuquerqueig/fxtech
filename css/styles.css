@@ -557,7 +557,15 @@ footer {
         align-items: center;
     }
 
-    p {
+    h1 {
+        text-align: left;
+    }
+
+    .star-content {
+        text-align: left;
+    }
+
+    .labs-grid {
         text-align: left;
     }
     
