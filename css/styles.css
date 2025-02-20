@@ -1,20 +1,21 @@
+/* =============================== */
+/*       ESTILOS GERAIS          */
+/* =============================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Teachers;
+    font-family: Teachers; /* Fonte principal (caso exista). */
 }
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
     max-width: 100%;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif; /* Fonte de fallback. */
     background: linear-gradient(180deg, #1A0B2E 0%, #0F051D 100%);
     color: white;
     line-height: 1.6;
@@ -24,7 +25,9 @@ p {
     font-size: 25px;
 }
 
-/* Elipse 1 */
+/* =============================== */
+/*            ELIPSES            */
+/* =============================== */
 .elipse1 {
     position: absolute;
     width: 258.44px;
@@ -32,10 +35,9 @@ p {
     left: -171.91px;
     top: -21.78px;
     background: #cb00dd4d; /* Cor com opacidade */
-    filter: blur(121.484px); /* Aplica o efeito de desfoque */
+    filter: blur(121.484px); /* Efeito de desfoque */
 }
 
-/* Elipse 2 */
 .elipse2 {
     position: absolute;
     width: 279.64px;
@@ -46,7 +48,20 @@ p {
     filter: blur(164.462px);
 }
 
-/* Header styles */
+.elipse4 {
+    position: absolute;
+    width: 451.55px;
+    height: 258.44px;
+    left: 1000.44px;
+    top: 1158px;
+    background: #53007080;
+    filter: blur(131.226px);
+    transform: rotate(90deg);
+}
+
+/* =============================== */
+/*            HEADER             */
+/* =============================== */
 header {
     padding: 10px 10%;
     display: flex;
@@ -55,18 +70,18 @@ header {
 }
 
 .logo-container {
-    display: flex; /* Garante que o logo e o texto fiquem na mesma linha */
-    align-items: center; /* Alinha o texto e o logo verticalmente */
+    display: flex; 
+    align-items: center; 
 }
 
 .logo {
-    width: 60px; /* Tamanho do logo */
-    margin-right: 10px; /* Pequeno espaço entre o logo e o texto */
+    width: 60px; 
+    margin-right: 10px; 
 }
 
 .text_logo {
-    font-family: Tektur; /* Mantém a fonte desejada */
-    font-size: 24px; /* Ajusta o tamanho do texto */
+    font-family: Tektur; 
+    font-size: 24px; 
 }
 
 nav ul {
@@ -79,15 +94,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* Define a cor branca para os links */
-    text-decoration: none; /* Remove o sublinhado padrão */
-    position: relative; /* Necessário para o efeito de linha com ::after */
-    padding-bottom: 5px; /* Para dar espaço à linha */
-    transition: color 0.3s ease; /* Suaviza a transição de cor */
+    color: white; 
+    text-decoration: none; 
+    position: relative; 
+    padding-bottom: 5px; 
+    transition: color 0.3s ease; 
 }
 
 nav ul li a:hover {
-    color: #d1b3ff; /* Um violeta bem claro no hover */
+    color: #d1b3ff; 
 }
 
 nav ul li a::after {
@@ -95,15 +110,15 @@ nav ul li a::after {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 0; /* Inicialmente, a linha é invisível */
+    width: 0; 
     height: 2px;
-    background: linear-gradient(to right, #1A0B2E, #a365ff, #1A0B2E); /* Gradiente de roxo escuro para claro */
-    transition: width 0.2s ease; /* Suaviza o efeito de aparecer a linha */
+    background: linear-gradient(to right, #1A0B2E, #a365ff, #1A0B2E); 
+    transition: width 0.2s ease; 
 }
 
 nav ul li a:focus::after,
 nav ul li a:active::after {
-    width: 100%; /* Quando o link é clicado, a linha aparece completamente */
+    width: 100%; 
 }
 
 .cta-button {
@@ -114,14 +129,13 @@ nav ul li a:active::after {
     text-decoration: none;
 }
 
-/* Hero section */
+/* =============================== */
+/*          HERO SECTION         */
+/* =============================== */
 .hero {
     padding: 40px 10%;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 80vh; /* Aumenta a altura mínima da hero para 100% da altura da tela */
+    min-height: 80vh; /* Ocupa boa parte da tela */
 }
 
 .hero-background {
@@ -134,18 +148,20 @@ nav ul li a:active::after {
     z-index: 0;
 }
 
+/* Mobile-first: layout vertical para a seção hero */
 .hero-container {
     position: relative;
     z-index: 1;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* empilha os elementos verticalmente */
     align-items: center;
     width: 100%;
 }
 
 .hero-content {
-    width: 50%;
-    padding-right: 50px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
 }
 
 .hero h1 {
@@ -155,9 +171,9 @@ nav ul li a:active::after {
 }
 
 .star-content {
-    display: flex; /* Exibe a estrela e o texto lado a lado */
-    align-items: flex-start; /* Alinha a estrela com o início do texto */
-    gap: 10px; /* Adiciona um espaçamento menor entre a estrela e o texto */
+    display: flex; 
+    align-items: flex-start; 
+    gap: 10px;
 }
 
 .star-content img {
@@ -171,16 +187,19 @@ nav ul li a:active::after {
     line-height: 1.5;
     color: #ffffff;
     margin: 0;
+    margin-bottom: 2rem;
 }
 
 .hero-image {
-    width: 50%;
-    height: auto;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
     position: relative;
 }
 
 .dev_img {
-    width: 600px;
+    width: 100%; /* adapta para telas pequenas */
+    max-width: 600px;
     height: auto;
 }
 
@@ -196,53 +215,41 @@ nav ul li a:active::after {
     margin-top: 30px;
 }
 
-.instagram_home {
-    width: 20px;
-    height: auto;
-    margin-right: 5px;
-}
-
-.discord_home {
-    width: 20px;
-    height: auto;
-    margin-right: 5px;
-}
-
+.instagram_home,
+.discord_home,
 .linkedin_home {
     width: 20px;
     height: auto;
     margin-right: 5px;
 }
 
-/* Labs section */
+/* =============================== */
+/*          LABS SECTION         */
+/* =============================== */
 .labs {
-    padding: 80px 10%;
-}
-
-.labs-content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
+    padding: 0rem 10%;
 }
 
 .labs-container {
-    display: flex; /* Altere para flex */
-    justify-content: space-between;
+    display: flex; 
+    flex-direction: column;  /* empilhamento vertical */
+    justify-content: center;
     align-items: center;
-    width: 100%; /* Garante que a largura seja distribuída igualmente */
+    width: 100%; 
 }
 
 .labs-grid {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo */
-    gap: 20px; /* Espaçamento entre os itens */
-    justify-content: space-between; /* Distribui os itens entre si */
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
 }
 
 .labs-item {
     display: flex;
     align-items: flex-start;
-    width: calc(50% - 10px); /* Garante que cada item ocupe 50% da largura, menos o gap */
+    width: 100%; /* em mobile ocupa toda a largura */
+    margin-bottom: 20px;
 }
 
 .labs-item img {
@@ -254,21 +261,25 @@ nav ul li a:active::after {
 
 .labs-item div {
     font-size: 20px;
-    color: white; /* Ajuste a cor conforme necessário */
+    color: white; 
 }
 
 .labs-icons {
-    width: 500px;
-    position: relative; /* Garante que tenha um contexto de empilhamento */
-    z-index: 1; /* Certifica que os ícones estejam na frente */
+    width: 100%;
+    max-width: 500px;
+    position: relative; 
+    z-index: 1; 
 }
 
 .labs-text {
-    flex: 1;
-    padding-left: 60px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
 }
 
-/* elipse3 */
+/* =============================== */
+/*           ELIPSE3             */
+/* =============================== */
 .elipse3 {
     position: absolute;
     width: 500px;
@@ -278,37 +289,28 @@ nav ul li a:active::after {
     background: #53007080;
     filter: blur(131.226px);
     transform: rotate(128.9deg);
-    z-index: -1; /* Coloca a elipse atrás dos outros elementos */
+    z-index: -1; 
 }
 
-/* Feedbacks section */
+/* =============================== */
+/*         FEEDBACKS SECTION     */
+/* =============================== */
 .feedbacks {
-    padding: 80px 40%;
+    padding: 20rem 10%;
     text-align: center;
 }
 
-/* elipse4 */
-.elipse4 {
-    position: absolute;
-    width: 451.55px;
-    height: 258.44px;
-    left: 1000.44px;
-    top: 1158px;
-
-    background: #53007080;
-    filter: blur(131.226px);
-    transform: rotate(90deg);
-}
-
+/* Garante que não haja overflow horizontal */
 .container, .section, .hero {
     max-width: 100%;
     overflow-x: hidden;
 }
 
-/* Contact section */
+/* =============================== */
+/*         CONTACT SECTION       */
+/* =============================== */
 .contact {
     padding: 120px 10%;
-    align-items: center;
     text-align: center;
 }
 
@@ -326,15 +328,14 @@ nav ul li a:active::after {
     border: none;
     border-radius: 5px;
     color: white;
-    font-size: 16px; /* Ajusta o tamanho da fonte para melhor legibilidade */
-    height: 50px; /* Define uma altura fixa para os campos de input */
+    font-size: 16px; 
+    height: 50px; 
 }
 
 .contact textarea {
-    height: 150px; /* Define uma altura maior para o campo de textarea */
+    height: 150px; 
     border-radius: 5px;
 }
-
 
 .contact button {
     width: 100%;
@@ -347,30 +348,36 @@ nav ul li a:active::after {
     cursor: pointer;
 }
 
-/* elipse5 */
+/* =============================== */
+/*           ELIPSE5             */
+/* =============================== */
 .elipse5 {
     position: absolute;
     width: 451.55px;
     height: 258.44px;
     left: -100px;
     top: 1694px;
-
     background: rgba(83, 0, 112, 0.5);
     filter: blur(131.226px);
     transform: rotate(90deg);
-    z-index: -1; /* Coloca a elipse atrás de todos os outros elementos */
+    z-index: -1; 
 }
 
-
-/* Footer */
+/* =============================== */
+/*            FOOTER             */
+/* =============================== */
 footer {
     padding: 50px 10% 10px 10%;
     background: #ffffff0d;
 }
 
+/* Em mobile, o footer ficará em coluna */
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 .footer-section {
@@ -378,10 +385,9 @@ footer {
     margin-right: 30px;
 }
 
-/*Footer all*/
 .logo_name {
-    display: flex; /* Garante que os elementos dentro da div fiquem lado a lado */
-    align-items: center; /* Alinha verticalmente o logo e o texto */
+    display: flex; 
+    align-items: center; 
 }
 
 .logo2 {
@@ -399,20 +405,8 @@ footer {
     color: white;
 }
 
-.instagram_footer {
-    margin-right: 5px;
-    margin-bottom: 10px;
-    width: 16px;
-    height: auto;
-}
-
-.discord_footer {
-    margin-right: 5px;
-    margin-bottom: 10px;
-    width: 16px;
-    height: auto;
-}
-
+.instagram_footer,
+.discord_footer,
 .linkedin_footer {
     margin-right: 5px;
     margin-bottom: 10px;
@@ -425,39 +419,37 @@ footer {
     margin-bottom: 10px;
 }
 
-/*Footer menu*/
 .footer-section-menu {
-    text-align: left; /* Alinha o título e os links à esquerda */
+    text-align: left; 
 }
 
 .footer-section-menu h3 {
-    margin-bottom: 20px; /* Adiciona um espaçamento entre o título "Menu" e os links */
+    margin-bottom: 20px; 
 }
 
 .footer-section-menu nav ul {
-    list-style: none; /* Remove os marcadores de lista */
+    list-style: none; 
     padding: 0;
     margin: 0;
-    display: flex;  /* Adiciona flexbox */
-    flex-direction: column;  /* Garante que os links fiquem empilhados verticalmente */
-    gap: 10px; /* Adiciona espaçamento entre os itens da lista */
+    display: flex;  
+    flex-direction: column; 
+    gap: 10px;
 }
 
 .footer-section-menu nav ul li {
-    margin: 0; /* Remove qualquer espaçamento adicional */
+    margin: 0; 
 }
 
 .footer-section-menu nav ul li a {
-    color: white; /* Define a cor dos links */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    font-size: 16px; /* Define o tamanho da fonte */
+    color: white; 
+    text-decoration: none; 
+    font-size: 16px; 
 }
 
 .footer-section-menu nav ul li a:hover {
-    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+    text-decoration: underline; 
 }
 
-/*Footer values*/
 .values-title {
     margin-bottom: 20px;
 }
@@ -467,7 +459,6 @@ footer {
     margin-bottom: 10px;
 }
 
-/*Footer news*/
 .news-title {
     margin-bottom: 20px;
 }
@@ -482,8 +473,9 @@ footer {
     padding: 10px;
     margin-right: 10px;
     background: #ffffff0d;
-    border-block-color: #ffffff;
     border-radius: 4px;
+    border: none;
+    color: white;
 }
 
 .newsletter button {
@@ -499,9 +491,114 @@ footer {
 }
 
 .license {
-    text-align: center; /* Centraliza o texto horizontalmente */
-    width: 100%; /* Garante que a div ocupe 100% da largura */
-    padding: 10px 0 ; /* Adiciona espaçamento acima e abaixo do texto */
-    color: white; /* Define a cor do texto */
-    font-size: 14px; /* Ajusta o tamanho da fonte */
+    text-align: center; 
+    width: 100%; 
+    padding: 10px 0; 
+    color: white; 
+    font-size: 14px; 
+}
+
+/* =============================== */
+/*       MEDIA QUERIES           */
+/* =============================== */
+
+/* A partir de 768px (tablets e telas maiores) */
+@media (min-width: 768px) {
+    /* HERO: organiza conteúdo e imagem lado a lado */
+    .hero-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .hero-content,
+    .hero-image {
+        width: 48%;
+        padding: 20px;
+        text-align: left;
+    }
+    
+    /* LABS: organiza imagem e texto lado a lado */
+    .labs-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .labs-image,
+    .labs-text {
+        width: 48%;
+        padding: 20px;
+        text-align: left;
+    }
+    
+    /* Footer: organiza os itens horizontalmente */
+    .footer-content {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 22rem;
+    }
+    
+    /* Ajusta o menu do header */
+    nav ul {
+        flex-direction: row;
+    }
+    
+    nav ul li {
+        margin: 0 15px;
+    }
+}
+
+/* Ajustes específicos para celulares */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Mantém o logo e o texto do logo na mesma linha (logo-container já é flex com direção row) */
+    .logo-container {
+        width: auto;
+    }
+    
+    /* Posiciona o menu abaixo do logo */
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+    }
+
+    nav ul li {
+        margin-left: 0px;
+    }
+    
+    /* Esconde o botão de contato */
+    .cta-button {
+        display: none;
+    }
+    
+    /* Esconde as elipses 2 e 4 */
+    .elipse2,
+    .elipse3,
+    .elipse4 {
+        display: none;
+    }
+
+    .instagram_home, .linkedin_home {
+        display: none;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        margin-left: 4rem;
+        gap: 2rem;
+    }
 }
