@@ -556,6 +556,10 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+
+    p {
+        text-align: left;
+    }
     
     /* Mantém o logo e o texto do logo na mesma linha (logo-container já é flex com direção row) */
     .logo-container {
