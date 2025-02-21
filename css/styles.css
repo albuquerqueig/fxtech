@@ -75,8 +75,7 @@ header {
 }
 
 .logo {
-    width: 60px; 
-    margin-right: 10px; 
+    width: 60px;
 }
 
 .text_logo {
@@ -127,6 +126,10 @@ nav ul li a:active::after {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+}
+
+.cta-button:hover {
+    background: #a2f9ff;
 }
 
 /* =============================== */
@@ -216,12 +219,22 @@ nav ul li a:active::after {
 }
 
 .instagram_home,
-.discord_home,
 .linkedin_home {
     width: 20px;
     height: auto;
     margin-right: 5px;
 }
+
+.instagram_home,
+.linkedin_home {
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.instagram_home:hover,
+.linkedin_home:hover {
+    transform: translateY(-5px); /* Move o botão para cima */
+}
+
 
 /* =============================== */
 /*          LABS SECTION         */
@@ -293,7 +306,7 @@ nav ul li a:active::after {
 }
 
 /* =============================== */
-/*         FEEDBACKS SECTION     */
+/*         FEEDBACKS SECTION       */
 /* =============================== */
 .feedbacks {
     padding: 20rem 10%;
@@ -346,6 +359,10 @@ nav ul li a:active::after {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.contact button:hover {
+    background: #df95ff;
 }
 
 /* =============================== */
